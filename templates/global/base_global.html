@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="d2rlld is a platform designed to manage low level dueling tournaments in Diablo 2 Ressurrected.">
+    <meta name="keywords" content="diablo, d2, lld, low, level, dueling">
+    <meta name="author" content="Lucas Escobar">
+
+    <title>d2rlld</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'global/css/colors.css' %}">
+
+    <link rel="icon" type="image/png" href="{% static 'global/favicon/favicon-16x16.png'%}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{% static 'global/favicon/favicon-32x32.png'%}" sizes="32x32">
+    
+    {% block apphead %}{% endblock %}
+
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+</body>
+
+</html>

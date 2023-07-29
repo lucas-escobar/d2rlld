@@ -1,0 +1,18 @@
+{% extends 'accounts/base_accounts.html' %}
+
+{% block main %}
+<h1>Login</h1>
+<form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div{% if field.name == 'username' or field.name == 'password' %} class="text-field" 
+        {% elif field.name == "remember_me" %} class="remember-me-field" 
+        {% endif %}>
+            {{field.label}}{{ field }}
+        </div>
+    {% endfor %}
+    <button type="submit">Login</button>
+</form>
+<a href="{% url 'auth:register' %}" id="register-link">Create a new account here</a>
+
+{% endblock %}

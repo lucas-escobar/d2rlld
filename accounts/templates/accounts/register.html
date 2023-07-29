@@ -1,0 +1,16 @@
+{% extends 'accounts/base_accounts.html' %}
+
+{% block main %}
+<h1>Register</h1>
+<form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="text-field">
+            {{field.label}}{{ field }}
+        </div>
+    {% endfor %}
+    <button type="submit">Register</button>
+</form>
+<a href="{% url 'auth:login' %}" id="login-link">Already have an account? Sign in here</a>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'global/base_global.html' %}
+
+{% block apphead %}
+<link rel="stylesheet" href="{% static 'accounts/styles.css' %}">
+{% endblock%}
+
+{% block body %}
+<header>
+    <a href="{% url 'core' %}" id="home-link">d2lld</a>
+</header>
+
+<main>
+    {% block main %}{% endblock %}
+</main>
+
+<footer>
+    <p>&copy; 2023 LucentSystems. All rights reserved.</p>
+</footer>
+{% endblock %}
